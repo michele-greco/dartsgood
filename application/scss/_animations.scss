@@ -1,0 +1,27 @@
+@keyframes pulse {
+    50% {
+      text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 31px #fff,
+        0 0 40px rgb(255, 255, 255),
+        0 0 10px #ffb621,
+        0 0 20px #ffb621,
+        0 0 30px #ffb621,
+        0 0 100px #ffb621;
+    }
+}
+
+@keyframes green-pulse {
+  50% {
+    text-shadow: 
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 31px #fff,
+      0 0 40px rgb(255, 255, 255),
+      0 0 10px var(--tertiary-color),
+      0 0 20px var(--tertiary-color),
+      0 0 30px var(--tertiary-color),
+      0 0 100px var(--tertiary-color);
+  }
+}

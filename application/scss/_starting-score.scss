@@ -1,0 +1,19 @@
+#starting-score-selection {
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        div.button-container {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        div.button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

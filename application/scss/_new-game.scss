@@ -1,0 +1,13 @@
+section#game-mode-selection {
+    h3{
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 30px;
+        text-shadow: 0 0 0.125em var(--shadow-color-primary);
+    }
+    .button-container{
+        button{
+            width: 250px;
+        }
+    }
+}

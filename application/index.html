@@ -1,0 +1,158 @@
+<!-- 
+ The file contains the whole structure of the web application.
+ Author: Laura Saccomanno < laura.saccomanno.informatics@gmail.com >
+ Version 1
+  -->
+
+
+
+  <!doctype html>
+  <html lang="en">
+  
+  <head>
+    <title>Dart Score Browser Application</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+  
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+  
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 id="app-title"></h1>
+  
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand d-lg-none" href="#">Dartsgood</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto ml-auto">
+                  <li class="nav-item active">
+                    <a id="new-game-menu-voice" class="nav-link custom-nav-link" href="#">New Game <span
+                      class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="delete-app-data-menu-voice" class="nav-link custom-nav-link" href="#">Delete App Data</a>
+                  </li>               
+                </ul>
+              </div>
+            </nav>
+  
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <main>    
+      <div class="container">
+        <div class="row">
+          <div class="col">
+  
+  
+            <!-- NUMBER OF PLAYER -->
+            <section id="number-of-players-selection">
+  
+              <h2 class="section-title glowing-section-title">New Arcade Game</h2>
+              <h3 class="text-glow">Choose the number of players</h3>
+              <div class="button-container">
+                <button type="button" class="btn neon-btn" value=1>1</button>
+                <button type="button" class="btn neon-btn" value=2>2</button>
+                <button type="button" class="btn neon-btn" value=3>3</button>
+                <button type="button" class="btn neon-btn" value=4>4</button>
+                <button type="button" class="btn neon-btn" value=5>5</button>
+                <button type="button" class="btn neon-btn" value=6>6</button>
+                <button type="button" class="btn neon-btn" value=7>7</button>
+                <button type="button" class="btn neon-btn" value=8>8</button>
+              </div>
+            </section>
+  
+            <!-- STARTING SCORE -->
+            <section id="starting-score-selection" class="d-none">
+              <h2 class="section-title text-glow">Starting score</h2>
+              <div class="button-container">
+                <button type="button" class="btn neon-btn" value=301>301</button>
+                <button type="button" class="btn neon-btn" value=501>501</button>
+                <button type="button" class="btn neon-btn" value=701>701</button>
+              </div>
+            </section>
+  
+            <!-- GAME INTERFACE -->
+            <section id="game-interface" class="d-none">
+              <!-- <h2 class="section-title text-glow">Arcade Mode</h2> -->
+  
+              <!-- Player Panel -->
+              <div id="player-panel" data-player-id="">
+  
+                <!-- Player Information -->
+                <div class="player-info-container">
+                  <div class="player-info-header">
+                    <p class="tag d-none"><span>/span></p>
+                    <h3>Player #<span></span></h3>
+                  </div>
+                  <p class="score"></p>
+                  <form id="new-score-form">
+                    <div class="form-input-group">
+                      <label>New Score</label>
+                      <div class="inline-input-submit">
+                        <input type="text" placeholder="Enter your score" autofocus>
+                        <button type="submit">Submit</button>
+                      </div>
+                    </div>
+                    <p class="form-help">Enter your score as an integer value.</p>
+                    <p class="form-error d-none">Error here</p>
+                  </form>
+                </div>
+                
+                <!-- Players Ranking -->
+                <div class="ranking-container">
+                  <h3>Arcade Ranking</h3>
+                  <ul></ul>
+                </div>
+  
+              </div>
+  
+            </section>
+  
+            <!-- PLAYER WINS -->
+            <section id="player-wins" class="d-none">
+              <h2 class="center-text">Player #<span></span> wins!</h2>
+              <div class="game-over-ranking-scores-container"></div>
+            </section>
+  
+          </div>
+        </div>
+      </div>
+    </main>
+  
+    <!-- Confirmation Modals -->
+    <section id="confirmation-modals-container"></section>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  
+    <!-- Dartsgood Scripts -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
