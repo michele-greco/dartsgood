@@ -30,21 +30,7 @@ header div.container div.row div{
             &:focus{
                 outline: none;
             }
-        }
-
-        // #new-game-menu-voice {
-        //     color: #eeeeeec2;
-        //     font-size: 20px;
-        //     font-weight: bold;
-        //     letter-spacing: 2px;
-
-        //     &:hover {
-        //         text-shadow: 0 0 1px var(--shadow-color-1), 0 0 4px var(--shadow-color-1), 0 0 1px var(--shadow-color-1), 0 0 13px var(--shadow-color-tertiary), 0 0 14px var(--shadow-color-tertiary);
-        //     }
-        // }
-
-        
-
+        }       
 
         ul.navbar-nav{
             li.nav-item{
@@ -73,7 +59,6 @@ header div.container div.row div{
 
     header div.container div.row div.col nav.navbar {
         ul li a.custom-nav-link {
-            // font-size: 28px;
             margin: 0 24px;
         }
     }
@@ -99,7 +84,6 @@ header div.container div.row div{
     }
 
     header div.container div.row div nav {
-        // padding: 24px 80px;
         padding: 24px 116px;
     }
 
@@ -108,10 +92,6 @@ header div.container div.row div{
             font-size: 2.7rem;
         }
     }
-
-    // header div.container div.row div nav #new-game-menu-voice {
-    //     font-size: 20px;
-    // }
     
 }
 
@@ -127,7 +107,6 @@ header div.container div.row div{
     }
 
     header div.container div.row div.col {
-        // background: var(--primary-color);
         margin-bottom: 16px;
     }
 
